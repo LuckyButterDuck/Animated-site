@@ -22,6 +22,7 @@ body {
 a {
 	text-decoration: none;
 }
+
 /* Стили шапки */
 /* Стили навигации */
 .navigation-blocks-site {
@@ -53,6 +54,8 @@ a {
 	position: relative;
 	margin-bottom: 2px;
 	cursor: pointer;
+	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+	z-index: 0;
 }
 
 .get-in-touch a {
@@ -63,15 +66,75 @@ a {
 	position: absolute;
 	top: 33%;
 	left: 15%;
+	z-index: 1;
+}
+
+/* Стили анимации кнопки */
+a.animated-button:link,
+a.animated-button:visited {
+	position: relative;
+	display: block;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+a.animated-button:link:after,
+a.animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+
+.get-in-touch:hover a {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: none;
+}
+
+.get-in-touch:hover:before {
+	bottom: 0%;
+	top: auto;
+	height: 100%;
+	border-radius: 15px;
+}
+
+.get-in-touch:before {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	width: 100%;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: #00FF00;
+	transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+	border-radius: 15px;
 }
 
 /* Стили колобка */
+/* .dummy-block-menu-nav {
+	position: fixed;
+} */
 .menu-contact {
 	cursor: pointer;
 	background-color: #D9D9D9;
 	border-radius: 50%;
 	width: 34.5px;
 	height: 34.5px;
+
 	position: relative;
 	transition: .9s;
 	z-index: 1;
@@ -112,6 +175,7 @@ a {
 	transition: .6s;
 	bottom: 45%;
 }
+
 /* Стили меню */
 .menu-phone-nav {
 	position: absolute;
@@ -145,8 +209,11 @@ a {
 .menu-phone-nav li {
 	padding: 5px;
 	transition: .3s;
+	/* z-index: -1; */
 }
+
 .menu-phone-nav a {
+	display: block;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 20px;
@@ -154,11 +221,103 @@ a {
 	color: #000;
 	position: relative;
 	visibility: hidden;
+	z-index: 1;
+	width: 100%;
 }
 
-.menu-phone-nav li:hover::before {
+.menu-phone-nav a:hover::before {
 	content: '●';
 	position: absolute;
-	right: 10%;
+	right: -2%;
 }
 
+/* Заголовок сайта */
+.header-wrapper {
+	width: 75.62%;
+	max-width: 1021px;
+	margin: 0 auto;
+	margin-top: 84px;
+}
+
+.blocks-from-words {
+	display: flex;
+	flex-direction: column;
+}
+
+.block-words {
+	display: grid;
+	grid-template-columns: repeat(8, 12%);
+}
+
+.block-words-1 .block-word:first-child {
+	text-align: end;
+}
+
+.block-words-1 .block-word:last-child {
+	grid-column: 2 / -1;
+}
+
+.block-words-2 .block-word:first-child {
+	grid-column: 1 / 4;
+	padding: 30px 55px 0 67.67px;
+
+}
+
+.block-words-2 .block-word:last-child {
+	grid-column: 4 / -1;
+}
+
+.block-words-3 .block-word {
+	grid-column: 2 / -1;
+	text-align: center;
+}
+
+.block-word p {
+	font-weight: 400;
+	font-size: 10.5px;
+	line-height: 15px;
+	color: #FFFFFF;
+}
+
+.block-word span,
+.block-word h1 {
+	font-weight: 400;
+	font-size: 96px;
+	line-height: 112.5px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.block-word sup {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 57px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+/* Картинка поля и текст к ней */
+.image-block {
+	padding-top: 85.5px;
+}
+.image-block img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.word-block-from-image {
+	display: flex;
+	justify-content: space-between;
+
+}
+.word-block-from-image p {
+	padding: 22.5px 0 21.75px;
+	font-weight: 700;
+	font-size: 10.5px;
+	line-height: 15px;
+	color: #FFFFFF;
+}
+
+.description-image-header hr {
+	border: 1px solid #282829;
+}
