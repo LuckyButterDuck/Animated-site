@@ -17,6 +17,8 @@
 
 body {
 	background-color: #1D1D1E;
+	overflow-x: hidden;
+	/* overflow-y: hidden; */
 }
 
 a {
@@ -300,6 +302,7 @@ a.animated-button:visited:after {
 .image-block {
 	padding-top: 85.5px;
 }
+
 .image-block img {
 	width: 100%;
 	border-radius: 5px;
@@ -310,6 +313,7 @@ a.animated-button:visited:after {
 	justify-content: space-between;
 
 }
+
 .word-block-from-image p {
 	padding: 22.5px 0 21.75px;
 	font-weight: 700;
@@ -320,4 +324,237 @@ a.animated-button:visited:after {
 
 .description-image-header hr {
 	border: 1px solid #282829;
+}
+
+/* Стили main */
+.text-blocks {
+	display: grid;
+	grid-template-columns: repeat(4, 25.11%);
+	grid-template-rows: repeat(6, 18.7%);
+	margin-top: 179.25px;
+}
+
+/* Стили ссылок общих */
+.text-blocks .block-general-information {
+	display: flex;
+	gap: 13.5px;
+}
+
+.text-blocks .block-general-information a {
+	font-weight: 700;
+	font-size: 10.5px;
+	line-height: 15px;
+	color: #FFFFFF;
+	transition: .3s;
+}
+
+.text-blocks .block-general-information a:hover {
+	color: #B6B6B6;
+}
+
+/* Стили заголовка */
+.text-blocks h2 {
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 84px;
+	text-align: center;
+	letter-spacing: -0.03em;
+	color: #FFFFFF;
+}
+
+.first-h2-block {
+	grid-column: 2 / -1;
+}
+
+.second-h2-block {
+	grid-column: 2 / -1;
+	grid-row-start: 2;
+}
+
+.three-h2-block {
+	grid-column: 3 / -1;
+	grid-row-start: 3;
+}
+
+.text-blocks h2 {
+	text-align: start;
+}
+
+.first-h2-block h2 {
+	padding-left: 126.5px;
+}
+
+.second-h2-block h2 {
+	padding-left: 50px;
+}
+
+/* Блок текста */
+.text-blocks .description-text-block {
+	font-weight: 400;
+	font-size: 13.5px;
+	line-height: 15px;
+	letter-spacing: -0.06em;
+	color: #FFFFFF;
+	grid-row-start: 4;
+	grid-column: 3 / -1;
+	padding-top: 31.5px;
+}
+
+/* Стили года */
+.text-blocks .description-year {
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 15px;
+	letter-spacing: 0.06em;
+	color: #FFFFFF;
+	grid-row-start: 6;
+	align-self: center;
+}
+
+/* Стили ссылок */
+.text-blocks .block-secondary-information a {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: -0.02em;
+	color: #FFFFFF;
+	position: relative;
+	transition: .3s;
+}
+
+.text-blocks .block-secondary-information a:hover {
+	color: #B6B6B6;
+}
+
+.text-blocks .block-secondary-information a::before {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: #383839;
+	position: absolute;
+	bottom: 20px;
+	transition: .3s;
+}
+
+.text-blocks .block-secondary-information a:hover::before {
+	transform: translateY(-5px);
+}
+
+.block-secondary-information {
+	display: flex;
+	gap: 36px;
+	grid-row-start: 6;
+	grid-column-start: 3;
+	padding-top: 13%;
+}
+
+/* Стили слова */
+.foundation {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: -0.06em;
+	color: #FFFFFF;
+	grid-row-start: 5;
+	align-self: end;
+}
+
+
+/* Стили линии */
+.text-blocks .hr-block-descriptio hr {
+	border: 1px solid #2D2D2F;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.hr-block-descriptio {
+	grid-row-start: 4;
+	position: relative;
+}
+
+/* Стили бегущей строки */
+.running-lines {
+	margin: 235.5px 0 127.5px;
+	width: 110vw;
+	transform: translateX(-5px);
+}
+
+.block-line {
+	height: 84.9px;
+	background-color: #71FD4D;
+	box-shadow: 0 0 5px #4DAD35;
+}
+
+.block-line span {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 15px;
+	letter-spacing: -0.12em;
+	color: #000000;
+}
+
+/* анимация блоков */
+.block-line .text-block {
+	animation: slidean 10s linear 0s infinite normal;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	gap: 25.5px;
+}
+
+.first-block-line .text-block {
+	transform: translateX(-100%);
+	animation: slidean 10s linear 5s infinite normal;
+}
+
+@keyframes slidean {
+	0% {
+		transform: translateX(-100%)
+	}
+
+	100% {
+		transform: translateX(100vw)
+	}
+}
+
+/* стрелка между слов */
+.arrow {
+	display: block;
+	height: 5px;
+	width: 40.5px;
+	background-color: #000;
+	position: relative;
+}
+
+.arrow::after {
+	content: '';
+	position: absolute;
+	height: 5px;
+	right: -3px;
+	top: -6px;
+	transform: rotate(45deg);
+	background-color: #000;
+	width: 20px;
+}
+
+.arrow::before {
+	content: '';
+	position: absolute;
+	height: 5px;
+	right: -3px;
+	top: 6px;
+	transform: rotate(-45deg);
+	background-color: #000;
+	width: 20px;
+}
+
+/* повороты блоков */
+.first-block-line {
+	transform: rotate(-4deg);
+}
+
+.second-block-line {
+	transform: rotate(4deg);
 }
