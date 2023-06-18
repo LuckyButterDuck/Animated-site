@@ -558,3 +558,35 @@ a.animated-button:visited:after {
 .second-block-line {
 	transform: rotate(4deg);
 }
+
+/* Стили для подвала */
+
+.block-footer-information {
+	height: 55px;
+}
+
+.blocks-information-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Стили иконок чтобы связаться со мной */
+.link-icons {
+	display: flex;
+	gap: 25px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.link-icons img {
+	width: 20px;
+}
+
+/* Стили текста */
+.blocks-information-footer p {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: #FFFFFF;
+}
