@@ -146,12 +146,13 @@ a.animated-button:visited:after {
 	height: 34.5px;
 	transition: .5s;
 }
+
 .menu-contact {
 	cursor: pointer;
 	background-color: #D9D9D9;
 	border-radius: 50%;
-	width: 34.5px;
-	height: 34.5px;
+	width: 35px;
+	height: 35px;
 	/* top: 5%; */
 	right: 0%;
 	position: absolute;
@@ -209,9 +210,9 @@ a.animated-button:visited:after {
 	visibility: hidden;
 	transition: .5s;
 	background-color: #D9D9D9;
-	top: 34.5px;
+	top: 35px;
 	right: 0;
-	width: 34.5px;
+	width: 35px;
 	height: 0;
 }
 
@@ -266,34 +267,29 @@ a.animated-button:visited:after {
 }
 
 .blocks-from-words {
-	display: flex;
-	flex-direction: column;
-}
-
-.block-words {
 	display: grid;
 	grid-template-columns: repeat(8, 12%);
+	grid-template-rows: repeat(5, auto);
 }
 
-.block-words-1 .block-word:first-child {
-	text-align: end;
-}
-
-.block-words-1 .block-word:last-child {
+.block-words-1 {
+	/* .block-word:last-child */
 	grid-column: 2 / -1;
 }
 
-.block-words-2 .block-word:first-child {
+.block-words-2 {
+	/* .block-word:first-child */
 	grid-column: 1 / 4;
 	padding: 30px 55px 0 67.67px;
-
 }
 
-.block-words-2 .block-word:last-child {
+.block-words-3 {
+	/* .block-word:last-child */
 	grid-column: 4 / -1;
 }
 
-.block-words-3 .block-word {
+.block-words-4 {
+	/* .block-word */
 	grid-column: 2 / -1;
 	text-align: center;
 }

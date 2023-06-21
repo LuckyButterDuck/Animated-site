@@ -61,7 +61,8 @@ menuContact.addEventListener('click', e => {
 
 
 		new Promise((resolve) => {
-			menuBlock.style.width = '34.5px'
+			console.log(`${menuContact.offsetWidth}px`)
+			menuBlock.style.width = `${menuContact.offsetWidth}px`
 			menuPhoneNav.style.width = '100%'
 			exitAria.style.width = '0vw'
 			exitAria.style.height = '0vh'
