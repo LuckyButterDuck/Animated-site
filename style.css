@@ -15,6 +15,10 @@
 	margin: 0 auto;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	background-color: #1D1D1E;
 	overflow-x: hidden;
